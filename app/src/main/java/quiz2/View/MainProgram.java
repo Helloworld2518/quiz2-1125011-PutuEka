@@ -19,7 +19,7 @@ public abstract class MainProgram {
 
             switch(menu){
                 case 1:
-                    Con
+                    tambahProduk(scn, control);
             }
         }
     }
@@ -56,18 +56,17 @@ public abstract class MainProgram {
                 else{
                     JenisB = JenisBuah.IMPORT;
                 }
-                Controller.addbuah(idBuah, namaBuah, hargaBuah, stokBuah, JenisB, beratBuah, tanggalKadaluarsa);
+                Controller.addBuah(idBuah, namaBuah, hargaBuah, stokBuah, JenisB, beratBuah, tanggalKadaluarsa);
                 break;
             case 3:
                 String namaFr = ScannerUtil.inputString("Masukkan Nama: ", scn);
                 String idFr = ScannerUtil.inputString("Masukkan ID: ", scn);
                 String tanggalKadaluarsaFr = ScannerUtil.inputString("Masukkan Tanggal: ", scn);
-                double beratfr = ScannerUtil.inputDouble("Masukkan Berat: ", scn);
                 int stokfr= ScannerUtil.inputInt("Masukkan Stok: ", scn);
                 double hargafr = ScannerUtil.inputDouble("Masukkan Harga: ", scn);
                 double suhu = ScannerUtil.inputDouble("Masukkan Suhu: ", scn);
                 
-                Controller.addFrozenFood(idFr, namaFr, hargafr, stokfr, beratfr,suhu, tanggalKadaluarsaFr);
+                Controller.addFrozenFood(idFr, namaFr, hargafr, stokfr,suhu, tanggalKadaluarsaFr);
                 // (String id, String nama, double harga, int stok, double suhuPenyimpanan, String tanggalKadaluarsa)
                 break;
         }

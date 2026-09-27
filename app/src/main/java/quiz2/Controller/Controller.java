@@ -8,7 +8,6 @@ import quiz2.Model.FrozenFood;
 import quiz2.Model.JenisBuah;
 import quiz2.Model.Mie;
 import quiz2.Model.Product;
-import quiz2.Model.Product;
 
 public class Controller {
     private List<Product> listproduk;
@@ -29,9 +28,9 @@ public class Controller {
         listproduk.add(new FrozenFood(id, nama, harga, stok, suhuPenyimpanan, tanggalKadaluarsa));
     }
 
-    public List<String> getProductAll() {
+    public List<String> getProductDetail() {
         List<String> allProduct = new ArrayList<>();
-        for (Product p : allProduct) {
+        for (Product p : listproduk) {
             allProduct.add(p.getProduct());
         }
         return allProduct;
